@@ -1,0 +1,18 @@
+.ant-btn {
+    @include flex-center;
+
+    &-lg span {
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    &.ant-btn-link {
+        padding-left: 0;
+        height: fit-content;
+        color: var(--color-white);
+
+        &:hover {
+            color: var(--color-primary);
+        }
+    }
+}

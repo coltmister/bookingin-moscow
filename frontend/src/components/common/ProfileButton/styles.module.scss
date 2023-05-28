@@ -1,0 +1,35 @@
+.avatar {
+    cursor: pointer;
+    overflow: visible;
+    background-color: #dfe1e6;
+    color: #5c5c5c;
+    display: none;
+
+    @include lg-block {
+        display: block;
+    }
+
+    img {
+        border-radius: 50%;
+    }
+}
+
+.profile {
+    @include flex-center;
+    min-height: var(--size-3xl);
+}
+
+.exit {
+    padding: 0;
+    min-height: var(--size-3xl);
+    color: var(--color-black) !important;
+    text-align: center;
+
+    @include lg-block {
+        color: var(--color-primary) !important;
+
+        &:hover {
+            color: var(--color-white) !important;
+        }
+    }
+}

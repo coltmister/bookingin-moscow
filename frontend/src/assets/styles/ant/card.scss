@@ -1,0 +1,12 @@
+.ant-card {
+    display: flex;
+    flex-direction: column;
+
+    .ant-card-actions {
+        margin-top: auto;
+    }
+
+    .ant-typography {
+        white-space: normal !important;
+    }
+}

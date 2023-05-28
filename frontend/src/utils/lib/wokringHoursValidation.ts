@@ -1,0 +1,1 @@
+import { array, boolean, object, string } from 'yup';export const wokringHoursValidation = object({    is_day_off: boolean(),    working_hours: array()        .of(object({ end: string().required(), start: string().required() }).nullable().notRequired())        .nullable(),});

@@ -1,0 +1,38 @@
+<html>
+<body onload="initKeycloak()">
+
+Редирект с фронта
+<script>
+    function getSearchParameters() {
+        var prmstr = window.location.search.substr(1);
+        return prmstr != null && prmstr !== "" ? transformToAssocArray(prmstr) : {};
+    }
+
+    function transformToAssocArray(prmstr) {
+        var params = {};
+        var prmarr = prmstr.split("&");
+        for (var i = 0; i < prmarr.length; i++) {
+            var tmparr = prmarr[i].split("=");
+            params[tmparr[0]] = tmparr[1];
+        }
+        return params;
+    }
+
+
+    function initKeycloak() {
+        var params = getSearchParameters();
+        console.log(params.code)
+        fetch(`{{host}}/api/v1/iam/auth/obtain-tokens/?code=${params.code}`, {
+        })
+            .then(r => {
+            return r.json()
+            })
+            .then(data => {
+            document.write(JSON.stringify(data, null, 4))
+        })
+    }
+</script>
+
+</body>
+</html>
+

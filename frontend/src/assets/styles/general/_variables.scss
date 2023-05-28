@@ -1,0 +1,88 @@
+/* Columns */
+:root {
+    --col-mobile: 4;
+    --col-tablet: 8;
+    --col-desktop: 12;
+}
+
+:root {
+    --container-width: 1366px;
+    --offset-xxs: 4px;
+    --offset-xs: 8px;
+    --offset-sm: 12px;
+    --offset-md: 16px;
+    --offset-lg: 20px;
+    --offset-xl: 24px;
+    --offset-2xl: 28px;
+    --offset-3xl: 32px;
+}
+
+:root {
+    --size-xxs: 4px;
+    --size-xs: 8px;
+    --size-sm: 12px;
+    --size-md: 16px;
+    --size-lg: 20px;
+    --size-xl: 24px;
+    --size-2xl: 28px;
+    --size-3xl: 32px;
+}
+
+:root {
+    --font-fallback: 'Verdana', 'Roboto', sans-serif;
+    --font-base: 'Cera Pro', var(--font-fallback);
+    --font-12: 400 12px / 14px var(--font-base);
+    --font-14: 400 14px / 18px var(--font-base);
+    --font-16: 400 16px / 20px var(--font-base);
+    --font-20: 400 20px / 25px var(--font-base);
+    --font-22: 400 20px / 25px var(--font-base);
+    --font-14-medium: 500 14px / 18px var(--font-base);
+    --font-16-medium: 500 16px / 20px var(--font-base);
+    --font-17-medium: 500 17px / 21px var(--font-base);
+    --font-18-medium: 500 18px / 22px var(--font-base);
+    --font-22-medium: 500 22px / 28px var(--font-base);
+    --font-28-medium: 500 28px / 35px var(--font-base);
+    --font-28-bold: 600 28px / 35px var(--font-base);
+    --font-heading-medium: 500 60px / 75px var(--font-base);
+}
+
+/* Palette Colors */
+:root {
+    --color-white: #fff;
+    --color-black: #000106;
+    --color-placeholder: #ffffff33;
+}
+
+/* Text Colors */
+:root {
+    --color-text-base: var(--color-black);
+}
+
+
+/* Primary Colors */
+:root {
+    --color-primary: #e74362;
+    --color-primary-bg: #17283f;
+    --color-accent-bg: #0c1522;
+}
+
+
+/* Interface utils */
+:root {
+    --header-height: 100px;
+}
+
+/* Categories colors */
+:root {
+    --c-art: #49b5f5;
+    --c-it: #5331e9;
+    --c-advertisement: #b522c8;
+    --c-design: #fd3b9e;
+    --c-fashion: #f23829;
+    --c-cartoon: #ed850a;
+    --c-publishing: #fce732;
+    --c-tv: #e6ba13;
+    --c-music: #0f8e3e;
+    --c-production: #05c8b0;
+    --c-arc: #61dc29;
+}

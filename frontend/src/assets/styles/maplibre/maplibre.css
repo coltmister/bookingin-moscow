@@ -1,0 +1,4 @@
+.mapboxgl-ctrl-bottom-right,
+.maplibregl-ctrl-bottom-right {
+    display: none;
+}

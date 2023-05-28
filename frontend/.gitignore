@@ -1,0 +1,14 @@
+build
+dist
+node_modules
+.idea
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+test-report.xml
+.DS_Store
+lefthook-local.yml
+.stylelintcache

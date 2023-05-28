@@ -1,0 +1,9 @@
+.profile {
+    padding: 56px;
+    padding-top: 0;
+}
+
+h1.title {
+    color: black !important; /* TODO: fix */
+    margin-bottom: var(--offset-3xl);
+}

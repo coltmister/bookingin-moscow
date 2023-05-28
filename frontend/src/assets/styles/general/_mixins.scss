@@ -1,0 +1,131 @@
+@mixin font-face($font-family, $url, $weight, $style) {
+    @font-face {
+        src: url("/fonts/#{$url}.woff2") format("woff2");
+        font-family: "#{$font-family}";
+        font-weight: #{$weight};
+        font-style: $style;
+        font-display: swap;
+    }
+}
+
+@mixin list-reset {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+@mixin btn-reset {
+    margin: 0;
+    outline: none;
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    color: inherit;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+@mixin xxl-block {
+    @media (min-width: (1400px)) {
+        @content;
+    }
+}
+
+@mixin xl-block {
+    @media (min-width: (1280px)) {
+        @content;
+    }
+}
+
+@mixin lg-block {
+    @media (min-width: (992px)) {
+        @content;
+    }
+}
+
+@mixin md-block {
+    @media (min-width: (768px)) {
+        @content;
+    }
+}
+
+@mixin sm-block {
+    @media (min-width: 592px) {
+        @content;
+    }
+}
+
+@mixin breakpoint($breakpoint) {
+    @media (min-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin webp($webp, $fallback) {
+    background-image: url($fallback);
+
+    /* Chrome 66+, Edge 79+, Opera 53+, Android Brower 80+ */
+    @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+        @supports (background-image: -webkit-image-set(url($webp) 1x)) {
+            background-image: -webkit-image-set(url($webp) 1x);
+        }
+    }
+
+    /* FF 66+ */
+    @supports (flex-basis: max-content) and (-moz-appearance: meterbar) {
+        background-image: url($webp);
+    }
+}
+
+@mixin webp2($webp, $fallback) {
+    background-image: $fallback;
+    @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+        @supports (background-image: -webkit-image-set($webp 1x) ) {
+            background-image: -webkit-image-set($webp 1x);
+        }
+    }
+
+    /* FF 66+ */
+    @supports (flex-basis: max-content) and (-moz-appearance: meterbar) {
+        background-image: $webp;
+
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin line-clamp($lines) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
+}
+
+@mixin absolute-center {
+    position: absolute;
+    inset: 50% 0 0 50%;
+    translate: 0 -50%;
+}
+
+@mixin primary {
+    @include flex-center;
+    text-decoration: none;
+    font: var(--font-22-medium);
+    min-height: 45px;
+    padding: 0 var(--offset-xl);
+    color: var(--color-white);
+    border-radius: var(--offset-xs);
+    background-color: var(--color-primary);
+
+    &:hover {
+        background-color: #f56e82;
+    }
+}

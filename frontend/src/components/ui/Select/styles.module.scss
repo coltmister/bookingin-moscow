@@ -1,0 +1,40 @@
+.select {
+    :global {
+        .ant-select-arrow svg {
+            width: 1rem;
+            height: 1rem;
+            transition: rotate 0.25s ease-in;
+        }
+
+    }
+
+    &:global.ant-select-open {
+        :global .ant-select-arrow svg {
+            rotate: 180deg;
+        }
+    }
+
+    &:global.ant-select-lg {
+        .ant-select-selector {
+            height: 45px !important;
+        }
+
+        .ant-select-selection-placeholder {
+            line-height: 45px !important;
+        }
+
+        .ant-select-selection-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .ant-select-selection-item-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .ant-select-selector .ant-select-selection-search-input {
+            height: 45px !important;
+        }
+    }
+}

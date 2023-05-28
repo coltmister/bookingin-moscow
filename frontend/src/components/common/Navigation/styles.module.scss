@@ -1,0 +1,78 @@
+.menu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+    row-gap: var(--offset-xl);
+    width: 100%;
+
+    @include lg-block {
+        flex-direction: row;
+    }
+}
+
+.link {
+    composes: link from global;
+    width: 100%;
+    justify-content: center;
+    font: var(--font-22-medium);
+    text-align: center;
+    white-space: nowrap;
+    transition: 0.25s ease-in-out;
+    color: var(--color-black);
+
+    &.active {
+        color: var(--color-primary);
+    }
+
+    @include lg-block {
+        width: fit-content;
+        color: var(--color-white);
+        font: var(--font-16);
+    }
+}
+
+.addPlace {
+    display: flex;
+    align-items: center;
+    gap: var(--offset-xxs);
+    color: var(--color-primary);
+    font: var(--font-22-medium);
+
+    @include lg-block {
+        margin-right: var(--offset-lg);
+        color: var(--color-white);
+        font: var(--font-17-medium);
+    }
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: var(--offset-xl);
+
+    @include lg-block {
+        gap: 0;
+        flex-direction: row;
+    }
+}
+
+.right {
+    composes: left;
+
+    a {
+        font: var(--font-22-medium);
+        text-align: center;
+        color: var(--color-black);
+
+        @include lg-block {
+            color: var(--color-white);
+            font: var(--font-16);
+        }
+    }
+
+    @include lg-block {
+        margin-left: auto;
+        align-items: center;
+    }
+}

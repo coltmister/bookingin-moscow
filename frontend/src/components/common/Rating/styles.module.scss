@@ -1,0 +1,8 @@
+.rating {
+    @include list-reset;
+    margin-right: var(--offset-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--offset-xxs);
+    color: var(--color-primary);
+}

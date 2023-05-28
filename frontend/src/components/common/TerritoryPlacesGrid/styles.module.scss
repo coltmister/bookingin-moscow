@@ -1,0 +1,13 @@
+.list {
+    @include list-reset;
+    display: grid;
+    gap: 20px;
+
+    @include lg-block {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include xl-block {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

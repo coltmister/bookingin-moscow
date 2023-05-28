@@ -1,0 +1,16 @@
+h2.title {
+    font-weight: 500;
+    margin-right: var(--offset-3xl);
+}
+
+.top {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--offset-xl);
+}
+
+.feedback {
+    color: var(--color-white);
+}
+

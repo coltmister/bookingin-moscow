@@ -1,0 +1,25 @@
+.container {
+    --col: var(--col-mobile);
+    --gap: var(--offset-md);
+    --offset: var(--offset-md);
+
+    display: grid;
+    grid-template-columns: repeat(var(--col), 1fr);
+    column-gap: var(--gap);
+    margin: 0 auto;
+    padding: 0 var(--offset);
+    width: 100%;
+    max-width: var(--container-width);
+
+    @media (min-width: 768px) {
+        --col: var(--col-tablet);
+        --gap: var(--offset-3xl);
+        --offset: var(--offset-3xl);
+    }
+
+    @media (min-width: 992px) {
+        --col: var(--col-desktop);
+        --gap: var(--offset-lg);
+        --offset: var(--offset-xl);
+    }
+}

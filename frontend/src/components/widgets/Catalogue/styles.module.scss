@@ -1,0 +1,41 @@
+.catalog {
+    margin-top: var(--offset-3xl);
+    margin-bottom: 70px;
+    padding-top: 60px;
+
+    @include lg-block {
+        padding-top: 0;
+        margin-bottom: 140px;
+
+
+
+        ul {
+            grid-column: 1 / -1;
+        }
+    }
+}
+
+.heading {
+    padding-top: 50px;
+    margin-bottom: var(--offset-3xl);
+}
+
+.radio {
+    &:global(.ant-radio-group) {
+        display: flex;
+    }
+}
+
+.radioItem {
+    display: flex;
+    align-items: center;
+    gap: var(--offset-xxs);
+
+    span {
+        font-size: 0;
+
+        @include lg-block {
+            font-size: var(--font-16);
+        }
+    }
+}

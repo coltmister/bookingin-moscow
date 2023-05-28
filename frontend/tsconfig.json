@@ -1,0 +1,39 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "useDefineForClassFields": true,
+        "lib": ["DOM", "DOM.Iterable", "ESNext"],
+        "allowJs": false,
+        "skipLibCheck": true,
+        "esModuleInterop": false,
+        "allowSyntheticDefaultImports": true,
+        "strict": false,
+        "forceConsistentCasingInFileNames": true,
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "react-jsx",
+        "paths": {
+            "@/assets/*": ["./src/assets/*"],
+            "@/icons": ["./src/assets/icons/index.ts"],
+            "@/layouts": ["./src/layouts/index.ts"],
+            "@/ui": ["./src/components/ui/index.ts"],
+            "@/widgets": ["./src/components/widgets/index.ts"],
+            "@/components": ["./src/components/common/index.ts"],
+            "@/hooks": ["./src/hooks/index.ts"],
+            "@/services": ["./src/services/index.ts"],
+            "@/models": ["./src/types/models/index.ts"],
+            "@/type-guards": ["./src/types/type-guards/index.ts"],
+            "@/utility-types": ["./src/types/utility-types/index.ts"],
+            "@/contexts": ["./src/contexts/index.ts"],
+            "@/utils": ["./src/utils/lib/index.ts"],
+            "@/constants": ["./src/utils/constants/index.ts"],
+            "@/pages": ["./src/pages/index.tsx"]
+        }
+    },
+    "include": ["./src", "./src/vite-env.d.ts", "./src/custom.d.ts"],
+    "exclude": ["node_modules", "**/*.spec.ts"],
+    "references": [{ "path": "./tsconfig.node.json" }]
+}

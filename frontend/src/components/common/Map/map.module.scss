@@ -1,0 +1,22 @@
+.mapWrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.map {
+  position: absolute;
+  width: 100%;
+  height: 450px;
+}
+
+.mapboxgl-popup-content,
+.maplibregl-popup-content {
+  padding: unset !important;
+  border-radius: 8px;
+}
+
+.mapboxgl-ctrl-top-left,
+.maplibregl-ctrl-top-left {
+  top: var(--safe-area-inset-top);
+}

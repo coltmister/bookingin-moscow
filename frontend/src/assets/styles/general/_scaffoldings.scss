@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: inherit;
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    font: var(--font-16);
+    color: var(--color-text-base);
+    background-color: var(--color-accent-bg);
+}
+
+body.no-scroll {
+    overflow-y: hidden;
+}
+
+#root {
+    height: 100%;
+
+    .ant-spin {
+        @include absolute-center;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: var(--offset-xxs);
+    text-decoration: none;
+    padding: 0 var(--offset-md);
+
+    &:is(:hover, :focus-visible) {
+        opacity: 0.5;
+    }
+}

@@ -1,0 +1,10 @@
+.address {
+    margin-bottom: 60px;
+    color: var(--color-white);
+}
+
+.street {
+    display: flex;
+    align-items: center;
+    gap: var(--offset-xs);
+}

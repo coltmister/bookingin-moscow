@@ -1,0 +1,16 @@
+.categories {
+    display: grid;
+    grid-template-columns: minmax(0, 6fr) minmax(0, 6fr);
+    width: 100%;
+    grid-column: 1 / -1;
+
+    ul {
+        @include list-reset;
+        display: flex;
+
+        li {
+            width: 100%;
+            height: fit-content;
+        }
+    }
+}

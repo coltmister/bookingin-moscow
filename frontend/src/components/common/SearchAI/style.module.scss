@@ -1,0 +1,1 @@
+.container {  display: grid;  gap: var(--offset-md);  @include lg-block {    gap: var(--offset-lg);  }}

@@ -1,0 +1,18 @@
+@import "antd/dist/reset.css";
+@import "general/fonts";
+@import "general/variables";
+@import "general/scaffoldings";
+
+/* Ant Design */
+@import "./ant/button";
+@import "./ant/datepicker";
+@import "./ant/modal";
+@import './ant/tooltip';
+@import "./ant/card";
+
+/* Maplibre */
+@import "./maplibre/maplibre.css";
+
+/* Swiper */
+@import "swiper/swiper-bundle.min.css";
+@import "./swiper/swiper";

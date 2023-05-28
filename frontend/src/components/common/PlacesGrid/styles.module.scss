@@ -1,0 +1,16 @@
+.list {
+    @include list-reset;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column: span 4;
+    gap: var(--offset-xs);
+
+    @include sm-block {
+        grid-column: span 8;
+    }
+
+    @include lg-block {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--offset-lg);
+    }
+}

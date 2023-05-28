@@ -1,0 +1,27 @@
+.text {
+    width: 100%;
+    justify-content: unset !important;
+    color: black !important;
+    padding-left: 11px;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    margin: 0 !important;
+    inset-inline-start: 0 !important;
+    font: var(--font-17-medium);
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    gap: 4px;
+    min-height: var(--size-3xl);
+}
+
+.field {
+    :global(.ant-descriptions-item-label) {
+        align-items: center !important;
+    }
+}

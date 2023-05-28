@@ -1,0 +1,9 @@
+h2.title {
+    color: var(--color-white);
+    font-weight: 500;
+
+    @include lg-block {
+        font-size: 60px;
+        line-height: 75px;
+    }
+}

@@ -1,0 +1,78 @@
+version: '3.3'
+
+services:
+  db:
+    build: ./etc/postgres
+    container_name: corp_db
+    env_file:
+      - .env
+    command: postgres -c config_file=/etc/postgresql.conf
+    volumes:
+      - ./var/postgres/data:/var/lib/postgresql/data
+      - ./etc/postgres/postgresql.conf:/etc/postgresql.conf
+    ports:
+      - '127.0.0.1:5432:5432'
+    restart: always
+  python:
+    image: corp_python:latest
+    build:
+      context: ./
+      dockerfile: ./etc/python/Dockerfile
+    container_name: corp_python
+    env_file:
+      - .env
+    command: gunicorn -c /etc/gunicorn.conf.py
+    volumes:
+      - ./src:/src
+      - ./var/logs:/var/logs
+      - ./var/static:/var/www/html/static
+      - ./var/media:/var/www/html/media
+      - ./etc/python/gunicorn.conf.py:/etc/gunicorn.conf.py
+    ports:
+      - '8000:8000'
+    restart: always
+    depends_on:
+      - db
+      - redis
+  redis:
+    image: redis:7-alpine
+    container_name: corp_redis
+    command: redis-server /usr/local/etc/redis/redis.conf
+    volumes:
+      - ./etc/redis/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./var/redis/data:/var/lib/redis
+    env_file:
+      - .env
+    ports:
+      - '127.0.0.1:63791:6379'
+    restart: always
+  celery:
+    image: corp_python:latest
+    container_name: corp_celery
+    command: celery -A settings worker --statedb=worker.state --concurrency=16
+    env_file:
+      - .env
+    volumes:
+      - ./src:/src
+      - ./var/logs:/var/logs
+      - ./var/static:/var/www/html/static
+      - ./var/media:/var/www/html/media
+    restart: always
+    depends_on:
+      - db
+      - redis
+      - python
+  celery_beat:
+    image: corp_python:latest
+    container_name: corp_celery_beat
+    command: celery -A settings beat --loglevel=INFO --scheduler django_celery_beat.schedulers:DatabaseScheduler
+    env_file:
+      - .env
+    volumes:
+      - ./src:/src
+      - ./var/logs:/var/logs
+      - ./var/static:/var/www/html/static
+      - ./var/media:/var/www/html/media
+    restart: always
+    depends_on:
+      - celery

@@ -1,0 +1,66 @@
+.card {
+    height: 100%;
+    padding: var(--offset-2xl) var(--offset-md);
+    border-radius: var(--offset-xs);
+    color: var(--color-black);
+    background-color: var(--color-white);
+
+    @include lg-block {
+        padding: var(--offset-3xl);
+    }
+}
+
+.imgStub {
+    @include webp('/img/stub.webp', '/img/stub.png');
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+
+    @include lg-block {
+        margin-bottom: 40px;
+    }
+}
+
+.top img, .imgStub {
+    display: block;
+    margin-right: 32px;
+    border-radius: 50%;
+    width: 80px;
+    aspect-ratio: 1 / 1;
+}
+
+.name {
+    margin: 0;
+    font: var(--font-22-medium);
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--offset-lg);
+
+    @include lg-block {
+        margin-bottom: 40px;
+    }
+}
+
+.main h3 {
+    margin: 0;
+    font: var(--font-18-medium);
+
+    @include lg-block {
+        font: var(--font-28-medium);
+    }
+}
+
+.feedback {
+    margin: 0;
+    font: var(--font-16);
+
+    @include lg-block {
+        font: var(--font-22)
+    }
+}

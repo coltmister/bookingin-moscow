@@ -1,0 +1,16 @@
+.back {
+    margin-bottom: var(--offset-3xl);
+
+    button {
+        padding-left: 0;
+    }
+}
+
+.place {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    @include lg-block {
+        padding-bottom: 140px;
+    }
+}

@@ -1,0 +1,39 @@
+.map {
+    display: none;
+    max-height: 450px;
+
+    @include lg-block {
+        display: block;
+    }
+}
+
+h2.title {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 16px;
+
+    @include lg-block {
+        margin-bottom: 20px;
+    }
+}
+
+.main {
+    margin-bottom: 80px;
+
+    @include lg-block {
+        margin-bottom: 140px;
+    }
+}
+
+.image {
+    margin-bottom: 20px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: var(--size-md);
+
+    @include lg-block {
+        display: none;
+        max-height: fit-content;
+        margin-bottom: 36px;
+    }
+}

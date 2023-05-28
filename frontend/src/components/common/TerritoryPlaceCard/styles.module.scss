@@ -1,0 +1,40 @@
+.card {
+    overflow: hidden;
+    border-radius: var(--size-xs);
+    background-color: var(--color-white);
+}
+
+.card img {
+    width: 100%;
+    max-height: 187px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.content {
+    padding: 20px;
+}
+
+.top {
+    margin-bottom: 8px;
+}
+
+h3.title {
+    color: var(--color-black);
+    font-size: 22px;
+    line-height: 20px;
+    margin-bottom: 8px;
+}
+
+.descr {
+    @include line-clamp(3);
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 12px;
+}

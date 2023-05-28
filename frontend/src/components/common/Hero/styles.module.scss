@@ -1,0 +1,7 @@
+.hero {
+    padding: 110px 0;
+
+    @include lg-block {
+        padding: 120px 0;
+    }
+}

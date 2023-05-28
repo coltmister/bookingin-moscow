@@ -1,0 +1,8 @@
+.profile {
+    padding: 56px;
+    padding-top: unset !important;
+}
+
+.title {
+    color: black !important; /* TODO: fix */
+}

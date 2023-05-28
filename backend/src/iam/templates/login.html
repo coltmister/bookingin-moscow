@@ -1,0 +1,43 @@
+<html>
+
+<body>
+
+<button onclick="submitOrder()">LogIn</button>
+
+<form id="login" action="https://id.bookingin.moscow/auth/realms/corp/protocol/openid-connect/auth" style="display: none">
+    <input type="hidden" name="client_id">
+    <input type="hidden" name="response_type">
+    <input type="hidden" name="scope">
+    <input type="hidden" name="redirect_uri">
+</form>
+
+<script>
+    function submitOrder() {
+        function formDeserialize(form, data) {
+            const entries = Object.entries(data)
+
+            for (const [key, val] of entries) {
+                const input = form.elements[key];
+                input.value = val;
+            }
+        }
+
+        const form = document.querySelector('form#login')
+        let data = {
+            "client_id": "iam",
+            "response_type": "code",
+            "scope": "openid profile",
+            "redirect_uri": "{{redirect_uri}}"
+        }
+        formDeserialize(form, data)
+        form.submit()
+
+    }
+
+</script>
+<a href="{{host}}/api/v1/iam/auth/logout/">
+    <button>Logout</button>
+</a>
+</body>
+
+</html>

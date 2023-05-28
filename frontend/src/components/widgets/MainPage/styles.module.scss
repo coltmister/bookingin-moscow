@@ -1,0 +1,139 @@
+h2.title {
+    grid-column: 1 / -1;
+    font: var(--font-28-medium);
+
+    @include md-block {
+        font: var(--font-heading-medium);
+    }
+}
+
+.places {
+    position: relative;
+    padding-bottom: 70px;
+
+    @include lg-block {
+        padding-bottom: 140px;
+    }
+
+    .title {
+        margin-bottom: var(--offset-lg);
+
+        @include lg-block {
+            margin-bottom: 40px;
+        }
+    }
+
+    :global(.swiper) {
+        position: static;
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--offset-lg);
+
+    @include md-block {
+        margin-bottom: var(--offset-3xl);
+    }
+}
+
+section.popular {
+    margin-bottom: 70px;
+
+    @include lg-block {
+        margin-bottom: 140px;
+    }
+}
+
+a.popular {
+    @include primary;
+    display: flex;
+    place-content: center;
+    grid-column: span 4;
+    min-height: 60px;
+}
+
+.section {
+    margin-bottom: 70px;
+    
+    @include lg-block {
+        margin-bottom: 140px;
+    }
+}
+
+.feed {
+    margin-bottom: 70px;
+
+    @include lg-block {
+        margin-bottom: 140px;
+    }
+}
+
+.support {
+    margin-bottom: 70px;
+
+    @include lg-block {
+        margin-bottom: 140px;
+    }
+}
+
+.support img {
+    display: none;
+
+    @include lg-block {
+        display: block;
+    }
+}
+
+.support .row {
+    display: grid;
+    color: var(--color-white);
+
+    h2 {
+        margin-bottom: 20px;
+
+        br {
+            display: none;
+
+            @include lg-block {
+                display: block;
+            }
+        }
+    }
+
+    p {
+        font: var(--font-22);
+        margin-bottom: 40px;
+
+        @include lg-block {
+            margin-bottom: 40px;
+            max-width: 670px;
+        }
+    }
+
+    .link {
+        text-decoration: none;
+        min-height: 60px;
+    }
+}
+
+.support .top {
+    @include lg-block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.slider ul {
+    @include list-reset;
+    align-content: stretch;
+}
+
+.slider {
+    width: 100%;
+    grid-column: 1 / -1;
+    margin-bottom: var(--offset-xs);
+}

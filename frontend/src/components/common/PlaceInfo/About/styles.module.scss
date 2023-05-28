@@ -1,0 +1,27 @@
+.about {
+    margin-bottom: 80px;
+}
+
+h3.title {
+    margin-bottom: var(--offset-md
+    );
+}
+
+.categories {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: var(--offset-md);
+
+    :global {
+        .ant-badge span.ant-badge-status-text {
+            color: var(--color-white);
+        }
+    }
+}
+
+.descr {
+    max-width: 762px;
+    font: var(--font-16);
+    color: var(--color-white);
+}

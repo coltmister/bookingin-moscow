@@ -1,0 +1,33 @@
+.title {
+    font-size: 22px;
+    line-height: 26px;
+    color: var(--color-black);
+    margin-bottom: 20px;
+
+    @include lg-block {
+        margin-bottom: 28px;
+    }
+}
+
+.timeslots:not(:empty) {
+    display: grid;
+    gap: 8px;
+    min-width: 140px;
+    max-height: 300px;
+    overflow: auto;
+}
+
+.empty {
+    color: var(--color-black);
+}
+
+.additional {
+    p {
+        margin: 0;
+
+        &:last-child {
+            font-size: 12px;
+            color: #cecccc;
+        }
+    }
+}

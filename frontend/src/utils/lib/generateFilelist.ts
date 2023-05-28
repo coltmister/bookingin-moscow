@@ -1,0 +1,1 @@
+import { PlacePhotoModel } from '../../services/PlacesService/Places.dto';export const generateFilelist = (url: string | PlacePhotoModel) => ({    url: typeof url === 'string' ? url : url.url,    uid: typeof url === 'string' ? Math.random().toString() : url.id,    name: typeof url === 'string' ? url : url.file_name,});

@@ -1,0 +1,58 @@
+.item {
+    display: grid;
+    grid-column: 1 / -1;
+}
+
+@for $i from 1 through 12 {
+    .item-#{$i} {
+        grid-column: span #{$i};
+    }
+}
+
+@media (max-width: 992px) {
+    @for $i from 1 through 12 {
+        .md-#{$i} {
+            grid-column: span #{$i};
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    @for $i from 1 through 12 {
+        .xs-#{$i} {
+            grid-column: span #{$i};
+        }
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.jcsb {
+    justify-content: space-between;
+}
+
+.jcc {
+    justify-content: center;
+}
+
+.jcfs {
+    justify-content: flex-start;
+}
+
+.jcfe {
+    justify-content: flex-end;
+}
+
+.aic {
+    align-items: center;
+}
+
+.aife {
+    align-items: flex-end;
+}
+
+.aifs {
+    align-items: flex-start;
+}

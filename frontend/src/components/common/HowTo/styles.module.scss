@@ -1,0 +1,53 @@
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--offset-xl);
+
+    @include lg-block {
+        margin-bottom: 60px;
+    }
+}
+
+.list {
+    @include list-reset;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font: var(--font-16);
+    color: var(--color-white);
+
+    @include lg-block {
+        flex-direction: row;
+        margin-bottom: 40px;
+        justify-content: space-between;
+    }
+}
+
+.list li {
+    display: flex;
+    align-items: center;
+    gap: var(--offset-lg);
+
+    svg {
+        flex-shrink: 0;
+    }
+
+    @include lg-block {
+        gap: 46px;
+        align-items: flex-start;
+        flex-direction: column;
+        font-size: 31px;
+        line-height: 36px;
+        width: 33%;
+    }
+}
+
+a.popular {
+    @include primary;
+    display: flex;
+    place-content: center;
+    grid-column: span 4;
+    min-height: 60px;
+}

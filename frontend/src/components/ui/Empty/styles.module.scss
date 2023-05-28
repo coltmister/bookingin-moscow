@@ -1,0 +1,8 @@
+.empty {
+    grid-column: 1 / -1;
+
+    :global(.ant-empty-description) {
+        color: var(--color-white);
+        font: var(--font-16-medium);
+    }
+}

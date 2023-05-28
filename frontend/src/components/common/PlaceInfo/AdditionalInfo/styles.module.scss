@@ -1,0 +1,38 @@
+.additional {
+    @include list-reset;
+    display: grid;
+    row-gap: var(--offset-3xl);
+    margin-bottom: 60px;
+
+    @include lg-block {
+        max-width: 490px;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 72px;
+    }
+}
+
+.additionalIcon {
+    display: flex;
+    align-items: center;
+}
+
+.additionalIcon svg {
+    width: var(--size-lg);
+    height: var(--size-lg);
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    column-gap: var(--offset-sm);
+    color: var(--color-white);
+}
+
+.schedule {
+    display: grid;
+    gap: var(--offset-xxs);
+
+    a {
+        @include line-clamp(2);
+    }
+}

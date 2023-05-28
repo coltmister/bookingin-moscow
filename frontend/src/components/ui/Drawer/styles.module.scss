@@ -1,0 +1,19 @@
+.drawer {
+    :global {
+        .ant-drawer-close {
+            margin: 0 0 0 auto;
+            color: var(--color-primary);
+            width: 1.5rem;
+            height: 1.5rem;
+
+            svg {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+
+        .ant-drawer-header {
+            border: 0;
+        }
+    }
+}
