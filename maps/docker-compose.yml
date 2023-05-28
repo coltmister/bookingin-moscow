@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+  hack_maps:
+    image: maptiler/tileserver-gl:v3.1.1
+    volumes:
+      - .:/data
+    ports:
+      - "127.0.0.1:8081:80"
+    command: ["-p", "80", "-c", "/data/config.json"]
+    restart: always

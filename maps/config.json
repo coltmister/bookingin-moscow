@@ -1,0 +1,72 @@
+{
+  "options": {
+    "paths": {
+      "root": "/app/node_modules/tileserver-gl-styles",
+      "fonts": "fonts",
+      "styles": "styles",
+      "mbtiles": "/data"
+    }
+  },
+  "styles": {
+    "basic-preview": {
+      "style": "basic-preview/style.json",
+      "tilejson": {
+        "bounds": [
+          19.3951,
+          41.81104,
+          46.43616,
+          81.47299
+        ]
+      }
+    },
+    "bright": {
+        "style": "/data/styles/bright.json",
+        "tilejson": {
+          "bounds": [
+            19.3951,
+            41.81104,
+            46.43616,
+            81.47299
+          ]
+        }
+      },
+    "dark-matter": {
+        "style": "/data/styles/dark_matter.json",
+        "tilejson": {
+          "bounds": [
+            19.3951,
+            41.81104,
+            46.43616,
+            81.47299
+          ]
+        }
+      },
+    "streets": {
+        "style": "/data/styles/streets.json",
+        "tilejson": {
+          "bounds": [
+            19.3951,
+            41.81104,
+            46.43616,
+            81.47299
+          ]
+        }
+      },
+    "new_black": {
+        "style": "/data/styles/new_black.json",
+        "tilejson": {
+          "bounds": [
+            19.3951,
+            41.81104,
+            46.43616,
+            81.47299
+          ]
+        }
+      }
+  },
+  "data": {
+    "v3": {
+      "mbtiles": "russia-europe.mbtiles"
+    }
+  }
+}
